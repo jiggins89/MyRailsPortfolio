@@ -19,9 +19,9 @@ puts "5 skills created"
 9.times do |portfolio|
   Portfolio.create!(
     title: "Portfolio #{portfolio + 1}",
-    subtitle: "This is my subitle",
+    subtitle: "This is my sub-title",
     body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    image_main: "https://via.placeholder.com/600x400",
+    image_main: "https://via.placeholder.com/600x250",
     image_thumb: "https://via.placeholder.com/350x250"
   )
 end

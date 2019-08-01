@@ -1,0 +1,6 @@
+<%= image_tag(@portfolio.image_main, :style => "width: 100%") %>
+<h1><%= @portfolio.title %></h1>
+<h4><%= @portfolio.subtitle %></h4>
+<p><%= @portfolio.body %></p>
+
+<%= link_to 'Back', portfolios_path, class: "ui button" %>

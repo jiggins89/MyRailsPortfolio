@@ -16,15 +16,17 @@
           <% end %>
         </div>
         <div class="content">
-          <a class="header"><%= p.title %></a>
+          <a class="header"><%= link_to "#{p.title}", portfolio_path(p) %></a>
           <div class="meta">
             <span class="date"><%= p.subtitle %></span>
           </div>
-          <div class="description">
-            <%= p.body %>
-          </div>
+          <i class="trash alternate outline icon float-right"></i>
+          <%= link_to edit_portfolio_path(p) do %>
+            <i class="edit outline icon float-right"></i>
+          <% end %>
         </div>
       </div>
     </div>
   <% end %>
 </div>
+
