@@ -7,11 +7,32 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    >
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
+    >
   </head>
 
   <body>
-    <div class="ui container">
+    <!-- Navbar -->
+    <nav class="navbar fixed-top navbar-light bg-dark">
+      <a class="navbar-brand" href="/pages/home">
+        <img src="https://www.johnhiggins.io/images/logo.png" width="50" height="50" alt="JH Logo">
+      </a>
+      <div class="links">
+        <a class="nav-links" href="/portfolios">Portfolios</a>
+        <a class="nav-links" href="/blogs">Blog</a>
+        <a class="nav-links" href="/skills">Skills</a>
+      </div>
+    </nav>
+
+    <div class="ui container" style="padding-top: 100px">
       <%= yield %>
     </div>
   </body>
