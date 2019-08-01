@@ -1,7 +1,7 @@
+<p id="notice"><%= notice %></p>
+
 <div style="padding: 40px 0px">
-  <a href="/portfolios/new">
-    <button class="ui button">New Portfolio</button>
-  </a>
+  <%= link_to 'Add Portfolio', new_portfolio_path, class: "ui button" %>
 </div>
 
 <div class="ui three column grid">
@@ -20,7 +20,9 @@
           <div class="meta">
             <span class="date"><%= p.subtitle %></span>
           </div>
-          <i class="trash alternate outline icon float-right"></i>
+          <%= link_to p, method: :delete, data: {confirm: "Are you sure?"} do %>
+            <i class="trash alternate outline icon float-right"></i>
+          <% end %>
           <%= link_to edit_portfolio_path(p) do %>
             <i class="edit outline icon float-right"></i>
           <% end %>
