@@ -1,9 +1,10 @@
 GIT
-  remote: https://github.com/doabit/semantic-ui-sass.git
-  revision: 97fc26081d91213370cde9223db69049bbe69e7d
+  remote: https://github.com/stympy/faker.git
+  revision: 0deec175348ca756082f65349c32e967ff8ef6c5
+  branch: master
   specs:
-    semantic-ui-sass (2.4.2.0)
-      sass (>= 3.2)
+    faker (2.1.0)
+      i18n (>= 0.7)
 
 GEM
   remote: https://rubygems.org/
@@ -175,13 +176,13 @@ DEPENDENCIES
   bootsnap (>= 1.1.0)
   byebug
   coffee-rails (~> 4.2)
+  faker!
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
   pg (>= 0.18, < 2.0)
   puma (~> 3.11)
   rails (~> 5.2.3)
   sass-rails (~> 5.0)
-  semantic-ui-sass!
   spring
   spring-watcher-listen (~> 2.0.0)
   turbolinks (~> 5)

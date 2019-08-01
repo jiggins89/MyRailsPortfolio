@@ -1,9 +1,15 @@
-.nav-links {
-  text-decoration: none;
-  color: white;
-    a {
-      padding-right: 10px !important;
-    }
+
+.links {
+  .nav-links {
+    text-decoration: none;
+    color: white;
+  }
+
+  a {
+    padding-right: 40px;
+  }
+
+  a:hover {
+    color: red;
+  }
 }
-
-

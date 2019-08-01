@@ -1,11 +1,19 @@
-<h1>Portfolios</h1>
+<div style="padding: 40px 0px">
+  <a href="/portfolios/new">
+    <button class="ui button">New Portfolio</button>
+  </a>
+</div>
 
 <div class="ui three column grid">
   <% @portfolios.each do |p| %>
     <div class="column">
       <div class="ui card">
         <div class="image">
-          <%= image_tag(p.image_thumb) %>
+          <% if p.image_thumb.nil? %>
+            <%=  image_tag("https://via.placeholder.com/350x250") %>
+          <% else %>
+            <%= image_tag(p.image_thumb) %>
+          <% end %>
         </div>
         <div class="content">
           <a class="header"><%= p.title %></a>
