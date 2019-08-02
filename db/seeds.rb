@@ -1,3 +1,5 @@
+require_relative "./seed_lists"
+
 puts "We be seeding!"
 
 10.times do |blog|
@@ -16,15 +18,15 @@ puts "10 Blogs created"
 end
 puts "5 skills created"
 
-9.times do |portfolio|
+@portfolios.each do |p|
   Portfolio.create!(
-    title: "Portfolio #{portfolio + 1}",
-    subtitle: "This is my sub-title",
-    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    image_main: "https://via.placeholder.com/600x250",
-    image_thumb: "https://via.placeholder.com/350x250"
+    title: p[:title],
+    subtitle: p[:subtitle],
+    body: p[:body],
+    image_main: p[:image_main],
+    image_thumb: p[:image_thumb]
   )
 end
-puts "9 portfolios created"
+puts "Portfolios created"
 
 puts "Seeding comleted with no issues!"

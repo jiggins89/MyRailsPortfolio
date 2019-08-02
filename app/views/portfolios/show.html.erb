@@ -1,4 +1,9 @@
-<%= image_tag(@portfolio.image_main, :style => "width: 100%") %>
+<% if @portfolio.image_thumb.nil? %>
+  <%=  image_tag("https://via.placeholder.com/350x250") %>
+<% else %>
+  <%= image_tag(@portfolio.image_thumb) %>
+<% end %>
+
 <h1><%= @portfolio.title %></h1>
 <h4><%= @portfolio.subtitle %></h4>
 <p><%= @portfolio.body %></p>
