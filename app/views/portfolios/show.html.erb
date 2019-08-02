@@ -1,7 +1,11 @@
 <% if @portfolio.image_thumb.nil? %>
-  <%=  image_tag("https://via.placeholder.com/350x250") %>
+  <%=  image_tag(
+    "https://via.placeholder.com/350x250",
+    :style => "width: 100%"
+    )
+  %>
 <% else %>
-  <%= image_tag(@portfolio.image_thumb) %>
+  <%= image_tag(@portfolio.image_main, :style => "width: 100%") %>
 <% end %>
 
 <h1><%= @portfolio.title %></h1>
