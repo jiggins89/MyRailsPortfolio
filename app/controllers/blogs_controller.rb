@@ -1,8 +1,8 @@
 class BlogsController < ApplicationController
-  before_action :set_blog, only: [:show, :edit, :update, :destroy]
+  before_action :set_blog, only: [:show, :edit, :update, :destroy, :toggle_status]
 
   def index
-    @blogs = Blog.all
+    @blogs = Blog.all.order("id ASC")
   end
 
   def show
@@ -42,6 +42,11 @@ class BlogsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to blogs_url, notice: 'Blog was successfully destroyed.' }
     end
+  end
+
+  def toggle_status
+    @blog.draft? ? @blog.published! : @blog.draft!
+    redirect_to blogs_url, notice: "Blog status set to #{@blog.status}"
   end
 
   private
