@@ -5,7 +5,7 @@ class CreatePortfolios < ActiveRecord::Migration[5.2]
       t.string :subtitle
       t.text :body
       t.text :image_main
-      t.text :imgae_thumb
+      t.text :image_thumb
 
       t.timestamps
     end
