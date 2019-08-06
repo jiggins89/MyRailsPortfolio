@@ -27,6 +27,9 @@
             <i class="edit outline icon float-right"></i>
           <% end %>
         </div>
+        <% p.tags.each do |t| %>
+          <p><%= t.title %></p>
+        <% end %>
       </div>
     </div>
   <% end %>
