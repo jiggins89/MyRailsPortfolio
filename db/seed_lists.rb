@@ -21,3 +21,5 @@
     image_thumb: "https://www.johnhiggins.io/images/youtube-clone.png"
   }
 ]
+
+@tags = %w(Ruby-On-Rails ReactJS JavaScript HTML CSS Ruby)

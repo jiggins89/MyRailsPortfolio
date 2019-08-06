@@ -29,4 +29,12 @@ puts "5 skills created"
 end
 puts "Portfolios created"
 
+@tags.each do |tag|
+  Tag.create!(
+    title: tag
+  )
+end
+
+puts "Tags created"
+
 puts "Seeding comleted with no issues!"
