@@ -15,6 +15,15 @@
       <%= form.text_area :body %>
     </div>
 
+    <div class="field">
+      <div class="inline fields">
+        <%= form.collection_check_boxes(:tag_ids, Tag.all, :id, :title) do |b| %>
+          <%=  b.label(class: "ui list") { b.check_box(class: "ui checkbox") + b.text }  %>
+        <% end %>
+      </div>
+    </div>
+
+
     <div class="actions">
       <%= link_to 'Back', portfolios_path, class: "ui button" %>
       <%= form.submit class: "ui button" %>
