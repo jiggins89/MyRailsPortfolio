@@ -18,23 +18,24 @@ puts "10 Blogs created"
 end
 puts "5 skills created"
 
+@tags.each do |tag|
+  Tag.create!(
+    title: tag[:title],
+    font_awesome_class: tag[:font_awesome_class]
+  )
+end
+puts "Tags created"
+
 @portfolios.each do |p|
   Portfolio.create!(
     title: p[:title],
     subtitle: p[:subtitle],
     body: p[:body],
     image_main: p[:image_main],
-    image_thumb: p[:image_thumb]
+    image_thumb: p[:image_thumb],
+    tag_ids: [1, 2, 3]
   )
 end
 puts "Portfolios created"
-
-@tags.each do |tag|
-  Tag.create!(
-    title: tag
-  )
-end
-
-puts "Tags created"
 
 puts "Seeding comleted with no issues!"

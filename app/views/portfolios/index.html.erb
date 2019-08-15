@@ -20,16 +20,18 @@
           <div class="meta">
             <span class="date"><%= p.subtitle %></span>
           </div>
-          <%= link_to p, method: :delete, data: {confirm: "Are you sure?"} do %>
-            <i class="trash alternate outline icon float-right"></i>
-          <% end %>
-          <%= link_to edit_portfolio_path(p) do %>
-            <i class="edit outline icon float-right"></i>
-          <% end %>
+          <div>
+            <% p.tags.each do |t| %>
+              <i class="<%= t.font_awesome_class %>"></i>
+            <% end %>
+            <%= link_to p, method: :delete, data: {confirm: "Are you sure?"} do %>
+              <i class="trash alternate outline icon float-right"></i>
+            <% end %>
+            <%= link_to edit_portfolio_path(p) do %>
+              <i class="edit outline icon float-right"></i>
+            <% end %>
+          </div>
         </div>
-        <% p.tags.each do |t| %>
-          <p><%= t.title %></p>
-        <% end %>
       </div>
     </div>
   <% end %>

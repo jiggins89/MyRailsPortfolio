@@ -22,4 +22,17 @@
   }
 ]
 
-@tags = %w(Ruby-On-Rails ReactJS JavaScript HTML CSS Ruby)
+@tags = [
+  {
+    title: "Ruby-On-Rails",
+    font_awesome_class: "fas fa-gem"
+  }, 
+  {
+    title: "ReactJS",
+    font_awesome_class: "fab fa-react"
+  },
+  {
+    title: "JavaScript",
+    font_awesome_class: "fab fa-js"
+  }
+]
