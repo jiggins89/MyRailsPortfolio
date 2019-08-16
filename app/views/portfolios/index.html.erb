@@ -4,9 +4,9 @@
   <%= link_to 'Add Portfolio', new_portfolio_path, class: "ui button" %>
 </div>
 
-<div class="ui three column grid">
+<div class="row">
   <% @portfolios.each do |p| %>
-    <div class="column">
+    <div class="col-sm">
       <div class="ui card">
         <div class="image">
           <% if p.image_thumb.nil? %>
@@ -36,4 +36,3 @@
     </div>
   <% end %>
 </div>
-

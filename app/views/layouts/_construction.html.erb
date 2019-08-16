@@ -1,0 +1,34 @@
+<% features = [
+		{name: "Portfolio", complete: true}, 
+		{name: "Blog", complete: false},
+		{name: "About", complete: false},
+		{name: "Contact", complete: false},
+		{name: "Admin", complete: false},
+		{name: "Homepage", complete: false}
+	] 
+%>
+
+<div class="d-flex flex-column justify-content-center">
+	<%= image_tag("website-under-construction.jpg", class: "img-fluid", style: "margin-top: 2em", alt: "website under construction") %>
+
+	<h2>We are building...</h2>
+	<p style="margin-top: -1em">
+		In the meantime please feel free to explore and play with the features we have comleted
+	</p>
+
+	<div class="ui form">
+		<div class="inline fields">
+			<% features.each do |f| %>
+				<div class="field">
+					<div class="ui checkbox">
+						<input type="checkbox" <%= "checked" if f[:complete] == true %>>
+						<label><%= f[:name] %></label>
+					</div>
+				</div>
+			<% end %>
+	</div>
+
+	<p>You can also visit our trello board<a href="https://trello.com/b/fliY48WH/personal-website" target="_blank"> here </a>to check our on progress</p> 
+</div>
+
+
