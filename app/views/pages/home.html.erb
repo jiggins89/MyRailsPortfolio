@@ -1,11 +1,34 @@
-<h1>Check back for updates</h1>
+<% features = [
+		{name: "Portfolio", complete: true}, 
+		{name: "Blog", complete: false},
+		{name: "About", complete: false},
+		{name: "Contact", complete: false},
+		{name: "Admin", complete: false},
+		{name: "Homepage", complete: false}
+	] 
+%>
 
-<h3>In the meantime please feel free to explore and play with features</h3>
+<iframe
+  src="https://i.giphy.com/media/xKvwa3SjldeWQ/giphy.webp"
+  width="480"
+  height="480"
+  frameBorder="0"
+></iframe>
 
+<h2>We still building...</h2>
+<h5>In the meantime please feel free to explore and play with the features we have comleted</h5>
 
-<h3>Blogs</h3>
-<%= @blogs.inspect %>
-<h3>Skills</h3>
-<%= @skills.inspect %>
-<h3>Portfolios</h3>
-<%= @portfolios.inspect %>
+<div class="ui form">
+	<div class="inline fields">
+		<% features.each do |f| %>
+			<div class="field">
+				<div class="ui checkbox">
+					<input type="checkbox" <%= "checked" if f[:complete] == true %>>
+					<label><%= f[:name] %></label>
+				</div>
+			</div>
+		<% end %>
+</div>
+
+<p>You can also visit our trello board<a href="https://trello.com/b/fliY48WH/personal-website" target="_blank"> here </a>to check our on progress</p> 
+
