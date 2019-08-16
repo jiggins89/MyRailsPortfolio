@@ -1,13 +1,13 @@
 <p id="notice"><%= notice %></p>
 
-<div style="padding: 40px 0px">
-  <%= link_to 'Add Portfolio', new_portfolio_path, class: "ui button" %>
+<div class="d-flex justify-content-end" style="padding: 1.5em 0px">
+  <%= link_to 'Add Portfolio', new_portfolio_path, class: "btn btn-primary" %>
 </div>
 
 <div class="row">
   <% @portfolios.each do |p| %>
-    <div class="col-sm">
-      <div class="ui card">
+    <div class="col-sm-4" style="padding-bottom: 2em">
+      <div class="ui card" style = "width: 100%">
         <div class="image">
           <% if p.image_thumb.nil? %>
             <%=  image_tag("https://via.placeholder.com/350x250") %>

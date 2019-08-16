@@ -1,0 +1,14 @@
+/* External libraries */
+@import 'bootstrap';
+@import "semantic-ui";
+@import "font-awesome";
+/* My styles */
+@import 'navbar';
+
+body {
+	background: #FFFFFF !important;
+}
+
+.button {
+	background: red !important;
+}
